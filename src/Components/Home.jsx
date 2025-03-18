@@ -10,19 +10,20 @@ import Footer from './footer'
 
 const Home = () => {
 	return (
-		<><div className="w-full min-h-screen"
-			style={{
-				backgroundColor: "radial-gradient(71.53% 71.53% at 36.82% 92.34%, rgba(244, 94, 61, 0.15) 0%, rgba(244, 61, 237, 0) 100%)",
-			}}>
-			<Header />
-			<HeroSection />
-			<MeetIyke />
-			<EmpowerSection />
-			<AmbSection />
-			<TestimonialSection />
-			<ContactSection />
-			<Footer />
-		</div>
+		<>
+			<div className=""
+				style={{
+					backgroundColor: "radial-gradient(71.53% 71.53% at 36.82% 92.34%, rgba(244, 94, 61, 0.15) 0%, rgba(244, 61, 237, 0) 100%)",
+				}}>
+				{/* <Header /> */}
+				<HeroSection />
+				<MeetIyke />
+				<EmpowerSection />
+				<AmbSection />
+				<TestimonialSection />
+				<ContactSection />
+				<Footer />
+			</div>
 
 		</>
 	)

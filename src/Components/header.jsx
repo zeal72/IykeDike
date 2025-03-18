@@ -1,50 +1,108 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
 	const toggleMenu = () => {
 		setIsOpen((prev) => !prev);
-		document.body.classList.toggle("overflow-hidden", isOpen);
+		document.body.classList.toggle("overflow-x-hidden", isOpen);
+	};
+
+	const toggleMobileDropdown = () => {
+		setMobileDropdownOpen((prev) => !prev);
 	};
 
 	return (
-		<header className="w-full   fixed top-0 left-0 z-50">
+		<header className="w-full fixed top-0 left-0 z-50">
 			<nav
 				className="container mx-auto mt-6 flex justify-between items-center
           bg-gray-900 border border-gray-700 rounded-full px-6 py-3
           shadow-[0px_6px_9px_rgba(0,0,0,0.6), 0px_2px_3px_rgba(0,0,0,0.12), 0px_1px_1px_rgba(0,0,0,0.04)]
           backdrop-blur-[40px] w-[90%] md:w-[90%] lg:w-[65%] max-w-[1200px]"
 				style={{
-					// width: "90%",
-					// maxWidth: "1200px",
 					height: "auto",
 					borderRadius: "80px",
 					borderWidth: "1px",
 					borderImageSource:
 						"linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)",
-					background:
-						"linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%)",
+					background: "linear-gradient(to right, #00011A, #170A1E)",
 					boxShadow:
 						"0px 6px 9px rgba(0,0,0,0.6), 0px 2px 3px rgba(0,0,0,0.12), 0px 1px 1px rgba(0,0,0,0.04)",
 				}}
 			>
 				{/* Logo */}
-				<a href="#" className="text-white">
+				<Link to="/" className="text-white">
 					<img src="./logo.png" alt="Iyke Dike Logo" className="h-10 md:h-12" />
-				</a>
+				</Link>
 
 				{/* Desktop Navigation */}
-				<div className="hidden md:flex space-x-4 md:space-x-2 lg:space-x-3 xl:space-x-11">
-					{["Home", "About", "Services", "Projects", "Trypreneur", "Blog", "Contact"].map((item) => (
-						<a
-							key={item}
-							href="#"
-							className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
+				<div className="hidden md:flex space-x-4 md:space-x-4 lg:space-x-3 xl:space-x-11 items-center ">
+					<Link
+						to="/"
+						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
+					>
+						Home
+					</Link>
+
+					{/* About Dropdown - Desktop */}
+					<div className="relative group">
+						{/* About Link */}
+						<Link
+							to="/about"
+							className="text-white text-sm lg:text-base md:mb-2 lg:mb-0 font-medium tracking-wide hover:text-gray-300 transition"
 						>
-							{item}
-						</a>
-					))}
+							About
+						</Link>
+
+						{/* Dropdown Content (Fix: Keep it open when hovering the dropdown) */}
+						<div className="absolute left-1/2 h-auto p-4 group transform -translate-x-1/2 hidden group-hover:block pointer-events-auto">
+							<div className="w-auto h-auto bg-gradient-to-b from-gray-900 to-black rounded-xl shadow-lg border border-gray-700">
+								<ul className="text-gray-200 flex flex-col ps-4 pe-4 pt-2 pb-3 space-y-1">
+									<Link to="/about">
+										<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition">About Mr Iyke</li>
+									</Link>
+									<Link to="/estate">
+										<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition"> Real Estate</li>
+									</Link>
+									<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition">Leadership/Mentorship</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+					<Link
+						to="services"
+						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
+					>
+						Services
+					</Link>
+					<Link
+						to="projects"
+						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
+					>
+						Projects
+					</Link>
+					<Link
+						to="trypreneur"
+						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
+					>
+						Trypreneur
+					</Link>
+					<Link
+						to="blog"
+						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
+					>
+						Blog
+					</Link>
+					<Link
+						to="contact"
+						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
+					>
+						Contact
+					</Link>
 				</div>
 
 				{/* Mobile Menu Button */}
@@ -100,19 +158,45 @@ const Header = () => {
 
 					{/* Mobile Nav Links */}
 					<nav className="flex-grow flex flex-col gap-y-4">
-						{["Home", "About", "Services", "Projects", "Trypreneur", "Blog", "Contact"].map((item) => (
-							<a
-								key={item}
-								href="#"
-								className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition"
+						<Link to="/" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Home</Link>
+
+						{/* About Dropdown - Mobile */}
+						<div>
+							<button
+								onClick={toggleMobileDropdown}
+								className="text-white text-lg font-medium tracking-wide flex justify-between items-center w-full"
 							>
-								{item}
-							</a>
-						))}
+								About
+								<span>{mobileDropdownOpen ? "▲" : "▼"}</span>
+							</button>
+
+							{/* Dropdown Content */}
+							{mobileDropdownOpen && (
+								<div className="mt-2 w-full">
+									<div className="w-full h-auto bg-gradient-to-b from-gray-900 to-black rounded-xl shadow-lg border border-gray-700">
+										<ul className="text-gray-200 flex flex-col justify-center ps-4 pt-2">
+											<Link to='about'>
+												<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition">About Mr Iyke </li>
+											</Link>
+											<Link to="/estate">
+												<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition"> Real Estate</li>
+											</Link>
+											<li>Leadership/mentorship </li>
+										</ul>
+									</div>
+								</div>
+							)}
+						</div>
+
+						<Link to="services" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Services</Link>
+						<Link to="projects" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Projects</Link>
+						<Link to="trypreneur" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Trypreneur</Link>
+						<Link to="blog" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Blog</Link>
+						<Link to="contact" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Contact</Link>
 					</nav>
 				</div>
-			</div>
-		</header>
+			</div >
+		</header >
 	);
 };
 
