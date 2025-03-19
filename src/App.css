@@ -1,0 +1,82 @@
+:root {
+	--font-lato: "Lato", sans-serif;
+	--font-thin: 100;
+	--font-light: 300;
+	--font-regular: 400;
+	--font-bold: 700;
+	--font-black: 900;
+}
+
+:root {
+	--font-lato: "Poppins", sans-serif;
+	--font-thin: 100;
+	--font-light: 300;
+	--font-regular: 400;
+	--font-bold: 700;
+	--font-black: 900;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-lato);
+	color: #040318;
+}
+
+p {
+	font-family: var(--font-Poppins);
+	font-weight: var(--font-regular);
+}
+
+body {
+	background-color: #040318;
+	padding-bottom: 100px;
+}
+
+.Welcome_section {
+	height: fit-content;
+	background-color: #FFFFFF;
+	border: 1px solid red;
+}
+
+.img {
+	border: 1px solid green;
+}
+
+.Career_section {
+	background-color: #111135;
+	height: 598px;
+	border: 1px solid red;
+
+}
+
+.Career_section img {
+	height: 100%;
+}
+
+.Career_section_img {
+	background-color: #111135;
+	width: 799px;
+	height: 598px;
+	border: 1px solid red;
+
+}
+
+.bg {
+	background-color: #111135;
+}
+
+
+@media (max-width: 796px) {
+	.CareerJourney {
+		height: fit-content;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.CoreBeliefs {
+		height: fit-content;
+		padding: 50px 0;
+	}
+}

@@ -18,9 +18,9 @@ const Header = () => {
 		<header className="w-full fixed top-0 left-0 z-50">
 			<nav
 				className="container mx-auto mt-6 flex justify-between items-center
-          bg-gray-900 border border-gray-700 rounded-full px-6 py-3
+          bg-gray-900 border border-gray-700 rounded-full px-8 py-3
           shadow-[0px_6px_9px_rgba(0,0,0,0.6), 0px_2px_3px_rgba(0,0,0,0.12), 0px_1px_1px_rgba(0,0,0,0.04)]
-          backdrop-blur-[40px] w-[90%] md:w-[90%] lg:w-[65%] max-w-[1200px]"
+          backdrop-blur-[40px] w-[90%] md:w-[80%] lg:w-[45%] max-w-[1200px]"
 				style={{
 					height: "auto",
 					borderRadius: "80px",
@@ -38,7 +38,7 @@ const Header = () => {
 				</Link>
 
 				{/* Desktop Navigation */}
-				<div className="hidden md:flex space-x-4 md:space-x-4 lg:space-x-3 xl:space-x-11 items-center ">
+				<div className="hidden md:flex space-x-4 md:space-x-4 lg:space-x-3 xl:space-x-7 items-center ">
 					<Link
 						to="/"
 						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
@@ -78,18 +78,6 @@ const Header = () => {
 						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
 					>
 						Services
-					</Link>
-					<Link
-						to="projects"
-						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
-					>
-						Projects
-					</Link>
-					<Link
-						to="trypreneur"
-						className="text-white text-sm lg:text-base font-medium tracking-wide hover:text-gray-300 transition"
-					>
-						Trypreneur
 					</Link>
 					<Link
 						to="blog"
@@ -187,10 +175,7 @@ const Header = () => {
 								</div>
 							)}
 						</div>
-
 						<Link to="services" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Services</Link>
-						<Link to="projects" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Projects</Link>
-						<Link to="trypreneur" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Trypreneur</Link>
 						<Link to="blog" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Blog</Link>
 						<Link to="contact" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Contact</Link>
 					</nav>

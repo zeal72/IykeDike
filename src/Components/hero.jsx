@@ -60,7 +60,7 @@ const HeroSection = () => {
 				</div>
 
 				{/* Right Content (Image) */}
-				<div className="relative pt-6 w-full max-w-4xl md:max-w-4xl lg:max-w-4xl xl:max-w-2xl">
+				<div className="relative pt-6 h-auto w-full max-w-4xl md:max-w-4xl lg:max-w-4xl xl:max-w-6xl">
 					<img
 						src="/iyke.png"
 						alt="Main Person"
