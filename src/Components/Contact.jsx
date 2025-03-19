@@ -45,8 +45,8 @@ export default function ContactSection() {
 				</div>
 				{/* Right Section - Form */}
 				<div className="flex-1 bg-white/10 backdrop-blur-xl p-4 sm:p-6 rounded-xl shadow-xl border border-white/20">
-					<h3 className="text-white text-base sm:text-lg font-semibold mb-2">Contact Us</h3>
-					<p className="text-gray-300 text-xs sm:text-sm mb-4">Have any project inquiries or require support?</p>
+					<h3 className="text-white text-base sm:text-lg font-semibold mb-2">Book Us</h3>
+					<p className="text-gray-300 text-xs sm:text-sm mb-4" style={{ color: '#fffff' }}>Have any project inquiries or require support?</p>
 					<form className="space-y-4">
 						<input type="text" placeholder="Name*" className="w-full bg-transparent border-b border-gray-300 text-white p-2 text-sm sm:text-base focus:outline-none" required />
 						<input type="email" placeholder="Email*" className="w-full bg-transparent border-b border-gray-300 text-white p-2 text-sm sm:text-base focus:outline-none" required />
