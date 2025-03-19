@@ -4,7 +4,8 @@ import Contactpage from './Components/Contact/Contactpage'
 import Header from './Components/header'
 import Home from './Components/Home'
 import Aboutpage from './Components/About/Aboutpage'
-// import Realestate from './Components/aboutsection/Realestate'
+import Estate from './Components/Estate/estate'
+import Footer from './Components/footer'
 function App() {
   return (
     <Router>
@@ -13,9 +14,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contactpage />} />
         <Route path="/about" element={<Aboutpage />} />
-        {/* <Route path="/estate" element={<Realestate />} /> */}
-        {/* Add other routes here */}
+        <Route path="/estate" element={<Estate />} />
       </Routes>
+      <Footer />
     </Router >
   )
 }

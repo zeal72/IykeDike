@@ -17,8 +17,7 @@
 }
 
 h4,
-h5,
-h6 {
+h5 {
 	font-family: var(--font-lato);
 	color: #040318;
 }
@@ -30,7 +29,7 @@ p {
 
 body {
 	background-color: #040318;
-	padding-bottom: 100px;
+	/* padding-bottom: 100px; */
 }
 
 .Welcome_section {
