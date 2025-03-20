@@ -57,21 +57,21 @@ const Mission = () => {
           </div>
 
           <ul
-            className="list-disc list-inside space-y-4 font-lato font-medium italic leading-[100%] tracking-[2%]"
+            className="list-disc list-inside space-y-4 font-lato font-medium italic"
             style={{
               fontSize: 'clamp(16px, 4vw, 19px)',
               fontWeight: '500px', // Responsive font size
             }}
-
           >
             <li >
               Iyke Dike is on a mission to empower and equip young people through purpose-driven education, leveraging innovative real estate development and the Edubase school system to provide accessible, high-quality learning environments. Through these platforms, we aim to bridge the knowledge gap, nurture leadership, and prepare the next generation for impact in both the marketplace and society.
             </li>
             <li >
               This mission is powered by the vision of building a transformative educational system that empowers young people to discover and fulfill their purpose, equipping them with knowledge and skills for marketplace relevance, while influencing policy and governance to create opportunities for youth development and societal progress.
+
             </li>
             <li >
-              They rest on a set of values termed PRICOC - Persistence - Resilience - Innovation - Curiosity - Optimism - Courage. In August education, he’s a passionate friend and partner at a tech firm weekly. He has worked hard to recognize it as part of his research and experience in law delivery, helping with future working roles such as put-in balance or child collaboration by 2022.
+              They rest on a set of values termed PRICOC - Persistence - Resilience - Innovation - Curiosity - Optimism - Courage
             </li>
           </ul>
         </motion.div>

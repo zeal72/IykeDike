@@ -15,7 +15,7 @@ const Header = () => {
 	};
 
 	return (
-		<header className="w-full fixed top-0 left-0 z-50">
+		<header className=" w-full fixed top-0 left-0 z-50">
 			<nav
 				className="container mx-auto mt-6 flex justify-between items-center
           bg-gray-900 border border-gray-700 rounded-full px-8 py-3
@@ -49,12 +49,12 @@ const Header = () => {
 					{/* About Dropdown - Desktop */}
 					<div className="relative group">
 						{/* About Link */}
-						<Link
-							to="/about"
-							className="text-white text-sm lg:text-base md:mb-2 lg:mb-0 font-medium tracking-wide hover:text-gray-300 transition"
+						<div
+							// to="/about"
+							className="text-white text-sm lg:text-base lg:mb-0 font-medium tracking-wide hover:text-gray-300 transition"
 						>
 							About
-						</Link>
+						</div>
 
 						{/* Dropdown Content (Fix: Keep it open when hovering the dropdown) */}
 						<div className="absolute left-1/2 h-auto p-4 group transform -translate-x-1/2 hidden group-hover:block pointer-events-auto">
@@ -66,7 +66,10 @@ const Header = () => {
 									<Link to="/estate">
 										<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition"> Real Estate</li>
 									</Link>
-									<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition">Leadership/Mentorship</li>
+									<Link to='/leadership'>
+										<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition">Leadership/Mentorship</li>
+									</Link>
+									<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition">Edubase</li>
 								</ul>
 							</div>
 						</div>
@@ -162,18 +165,21 @@ const Header = () => {
 							{mobileDropdownOpen && (
 								<div className="mt-2 w-full">
 									<div className="w-full h-auto bg-gradient-to-b from-gray-900 to-black rounded-xl shadow-lg border border-gray-700">
-										<ul className="text-gray-200 flex flex-col justify-center ps-4 pt-2">
-											<Link to='about'>
+										<ul className="text-gray-200 flex flex-col justify-center  pt-2 pb-3">
+											<Link to='/about'>
 												<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition">About Mr Iyke </li>
 											</Link>
 											<Link to="/estate">
 												<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition"> Real Estate</li>
 											</Link>
-											<li>Leadership/mentorship </li>
+											<Link to='/leadership'>
+												<li className="hover:text-white hover:bg-gray-800 rounded-md px-3 py-1 transition">Leadership/mentorship </li>
+											</Link>
 										</ul>
 									</div>
 								</div>
 							)}
+
 						</div>
 						<Link to="services" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Services</Link>
 						<Link to="blog" className="text-white text-lg font-medium tracking-wide hover:text-gray-300 transition">Blog</Link>

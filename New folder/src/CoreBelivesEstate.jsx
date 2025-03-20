@@ -29,20 +29,23 @@ const Explore_RealEstate = () => {
         className="w-full flex justify-center items-center flex-col text-center text-white"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }} // Set `once` to false for repeat animations
-        variants={staggerContainer} // Apply staggerContainer animation
+        viewport={{ once: false, amount: 0.5 }}
+        variants={staggerContainer}
       >
-        {/* Image Section */}
-        <motion.div
+        {/* Animated Button Image */}
+        <motion.a
+          href="https://pwanlighthouse.com.ng/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex justify-center items-center w-full"
-          variants={scaleIn} // Apply scaleIn animation
+          variants={scaleIn}
         >
           <img
-            className="w-auto max-w-full h-auto pt-5 sm:pt-10"
+            className="w-auto max-w-full h-auto pt-5 sm:pt-10 cursor-pointer"
             src="/_ControlButton.png"
-            alt="Subheading"
+            alt="Explore Real Estate Ventures"
           />
-        </motion.div>
+        </motion.a>
       </motion.div>
     </div>
   );
