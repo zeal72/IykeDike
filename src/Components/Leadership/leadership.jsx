@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Hero from "./hero.jsx";
 import "./App.css";
-import Graphics from "./graphics.jsx";
+import Graphics from "./Graphics.jsx";
 import LeadershipPage from "./Leader.jsx";
 
 function Leadership() {
