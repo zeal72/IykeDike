@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="header h-[7rem] md:h-[7.4rem]">
+      <div className="bg-[#040318] h-[7rem] md:h-[7.4rem]">
         <Header />
       </div>
       <Routes>
