@@ -8,6 +8,8 @@ import Estate from './Components/Estate/estate'
 import Footer from './Components/footer'
 import Leadership from './Components/Leadership/leadership'
 import ScrollToTop from './Components/scroll'
+import Edubase from './Components/Edubase/Edubase'
+import Services from './Components/Services/services'
 function App() {
   return (
     <Router>
@@ -21,6 +23,8 @@ function App() {
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/estate" element={<Estate />} />
         <Route path="/leadership" element={<Leadership />} />
+        <Route path="/edubase" element={<Edubase />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
       <Footer />
     </Router >
