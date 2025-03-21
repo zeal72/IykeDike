@@ -55,7 +55,7 @@ export default function Footer() {
 			</div>
 
 			<div className="container mx-auto mt-40 lg:mt-0 sm:pt-24 md:pt-6 pb-8 sm:pb-12 px-4 lg:px-24 sm:px-6">
-				<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center md:text-center sm:text-left">
+				<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center text-center">
 					<p className="text-sm sm:text-sm md:text-[14.17px] font-inter font-medium text-gray-300 order-2 sm:order-1">
 						© 2025 Amb Iyke Dike. All rights reserved.
 					</p>
