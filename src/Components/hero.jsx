@@ -15,18 +15,6 @@ const HeroSection = () => {
 		}
 	};
 
-	const slideInLeft = {
-		hidden: { opacity: 0, x: -50 },
-		visible: {
-			opacity: 1,
-			x: 0,
-			transition: {
-				duration: 0.8,
-				ease: "anticipate"
-			}
-		}
-	};
-
 	return (
 		<section className="w-full bg-[#040318] flex items-center px-6 md:px-12 lg:px-16 xl:px-24 py-0 lg:py-14">
 			<div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16">
@@ -51,7 +39,7 @@ const HeroSection = () => {
 						and transforming communities through innovation, resilience, and knowledge-sharing.
 					</motion.p>
 
-					<motion.div variants={slideInLeft} className="flex justify-center md:justify-start">
+					<motion.div variants={fadeInUp} className="flex justify-center md:justify-start">
 						<button className="min-w-[140px] md:min-w-[160px] gap-2.5 lg:min-w-[180px] h-[2.8rem] md:h-[3rem] lg:h-[3.2rem] rounded-full border border-white/10 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(255,255,255,0)] hover:bg-[#4a4a57] shadow-[0px_6px_12px_rgba(0,0,0,0.5),0px_3px_6px_rgba(0,0,0,0.3),0px_1px_2px_rgba(0,0,0,0.2)] flex items-center justify-center px-4 md:px-6 lg:px-8 text-white font-medium text-[0.875rem] md:text-[1rem] lg:text-[1.125rem] transition-all duration-300 cursor-pointer">
 							Discover more <span>→</span>
 						</button>

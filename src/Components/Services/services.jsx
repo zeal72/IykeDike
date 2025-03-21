@@ -6,15 +6,6 @@ const fadeInUp = {
 	visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
 };
 
-const fadeInLeft = {
-	hidden: { opacity: 0, x: -50 },
-	visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' } },
-};
-
-const fadeInRight = {
-	hidden: { opacity: 0, x: 50 },
-	visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' } },
-};
 
 const Services = () => {
 	return (
@@ -62,7 +53,7 @@ const Services = () => {
 						initial="hidden"
 						whileInView="visible"
 						viewport={{ once: true }}
-						variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+						variants={index % 2 === 0 ? fadeInUp : fadeInUp}
 						className="w-full md:w-[80%] xl:w-[40%] lg:w-1/2 flex justify-center"
 					>
 						<img src={service.image} alt={service.title} className="w-full object-cover" />
